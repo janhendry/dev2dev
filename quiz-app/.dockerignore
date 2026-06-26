@@ -1,0 +1,17 @@
+# Wird im Container frisch via npm ci installiert
+node_modules
+
+# Build-Artefakt: wird in der Build-Stage neu erzeugt
+dist
+
+# Laufzeitdaten gehoeren ins Volume, nicht ins Image
+server/data
+
+# Nicht relevant fuer den Build-Context
+.git
+.gitignore
+*.md
+.env
+.env.*
+biome.json
+quellen

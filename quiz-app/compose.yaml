@@ -1,0 +1,10 @@
+services:
+  quiz:
+    build: .
+    ports:
+      - "127.0.0.1:3001:3001"
+    environment:
+      PORT: 3001
+    volumes:
+      - ./data:/app/server/data
+    restart: unless-stopped
